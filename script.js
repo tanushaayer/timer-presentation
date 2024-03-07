@@ -34,7 +34,7 @@ function randomHole(holes) {
 // }
 
 function showMole() {
-    const time = randomTime(3000, 5); // Adjust mole up time if necessary
+    const time = randomTime(3000, 5000); // Adjust mole up time if necessary
     const hole = randomHole(holes);
     const mole = hole.querySelector('img');
     mole.src = './images/image_processing20200410-20919-1qpatno.png'; // Reset to live beaver image
@@ -81,7 +81,7 @@ function whack(e) {
     score++;
     setTimeout(() => {
         this.classList.remove('up'); // Hide mole after a delay to show dead beaver
-    }, 500); // Short delay to allow player to see the change
+    }, 3000); // Short delay to allow player to see the change
     scoreBoard.textContent = score;
 }
 
