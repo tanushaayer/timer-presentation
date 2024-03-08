@@ -1,12 +1,27 @@
 body {
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;           
+    background-image: url(./images/green-image.jpg);
+    background-size: cover;
 }
 
 .game-board{
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-around;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+#start-button{
+    padding: 10px;
+    font-family: inherit;
+    margin: 10px;
+}
+
+#game-time{
+    padding: 8px;
 }
 
 .mole-hole {
@@ -17,19 +32,8 @@ body {
     display: inline-block;
     margin: 10px;
     position: relative;
-    overflow: hidden; /* Ensure parts outside this container are not shown */
-}
-
-/* .mole {
-    width: 100%;
-    height: 100%;
-    background-color: brown;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -90px; /* Start hidden */
-    /* transition: bottom 0.3s;
-    right: 1px; */
-/* } */ 
+    overflow: hidden; 
+    box-shadow: 8px 17px 15px -4px rgba(0,0,0,0.1);}
 
 .mole {
     width: 100%; /* Adjust as necessary to fit the hole */
@@ -42,15 +46,23 @@ body {
 }
 
 .mole.up {
-    bottom: 10px; /* Appear */
+    bottom: 0px; /* Appear */
 }
 
-img{
-    width:50px;
-    height:50px;
-}
 
-//
-imag{
+@media (max-width: 480px) {
+    .mole-hole {
+        width: 50px; /* Even smaller for phones */
+        height: 50px;
+        margin: 5px; /* Reduce spacing */
+    }
 
+    .game-board {
+        max-width: 300px; /* Constrain game board width */
+        margin: 0 auto; /* Center game board */
+    }
+
+    h1, p {
+        font-size: 16px; /* Smaller text for smaller screens */
+    }
 }

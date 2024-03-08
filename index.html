@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whack-a-Mole Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+                
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
-    <h1>Whack-a-Mole!</h1>
-    <div>Game Duration (seconds): <input type="number" id="game-time" value="30"></div>
-    <button id="start-button">Start Game</button>
-    <p>Time Left: <span id="time-left">0</span> seconds</p>
-    <p>Score: <span id="score">0</span></p>
+    <div style="display: flex; flex-direction: column; align-items: center; margin: 78px; padding: 20px;">
+        <h1 style="color: #b35959; margin-bottom: 35px;">Whack-a-Mole!</h1>
+        <div>Game Duration (seconds): <input type="number" id="game-time" value="30"></div>
+        <button id="start-button">Start Game</button>
+        <p>Time Left: <span id="time-left">0</span> seconds</p>
+        <p>Score: <span id="score">0</span></p>
+
     <div class="game-board">
         <!-- 9 Moles -->
         <div class="mole-hole">
@@ -42,7 +49,8 @@
             <img src="./images/image_processing20200410-20919-1qpatno.png" class="mole" alt="Beaver">
         </div>
         <!-- <img src="./images/dead-beaver-head.png"> -->
-    </div>
+   </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
