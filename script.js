@@ -30,6 +30,8 @@ $(document).ready(function() {
     }
 
     function startGame() {
+        let btnText = $('#start-button').text()
+        $('#start-button').text("Started")
         $('#score').text(0);
         score = 0;
         timeLeft = parseInt($('#game-time').val());
@@ -44,14 +46,18 @@ $(document).ready(function() {
             timeLeft--;
             $('#time-left').text(timeLeft);
             if (timeLeft <= 0) {
+                $('#gameOverSound')[0].play()
+                $('#start-button').text( "Start Game")
                 clearInterval(countdownTimer);
                 clearInterval(moleTimer);
                 alert(`Time's up! Your final score is ${score}`);
+
             }
         }, 1000);
     }
 
     $('.mole').click(function() {
+        $('#whackSound')[0].play();
         $(this).attr('src', './images/dead-beaver.png');
         score++;
         setTimeout(() => {
